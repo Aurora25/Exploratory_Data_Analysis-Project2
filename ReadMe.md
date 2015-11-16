@@ -1,3 +1,6 @@
+This ReadMe file contains the instruction page from the coursera course Exploratory Data Analysis for the second course project. 
+I copied it from course webseit Nov. 16th, 2015 to give background information about the course project for people who are interested to understand my R-files.  
+
 ##Introduction
 
 Fine particulate matter (PM2.5) is an ambient air pollutant for which there is strong evidence that it is harmful to human health. In the United States, the Environmental Protection Agency (EPA) is tasked with setting national ambient air quality standards for fine PM and for tracking the emissions of this pollutant into the atmosphere. Approximatly every 3 years, the EPA releases its database on emissions of PM2.5. This database is known as the National Emissions Inventory (NEI). You can read more information about the NEI at the EPA National Emissions Inventory web site.
@@ -20,25 +23,25 @@ PM2.5 Emissions Data (summarySCC_PM25.rds): This file contains a data frame with
 	20 09001 10200504  PM25-PRI     0.388 POINT 1999
 	24 09001 10200602  PM25-PRI     1.490 POINT 1999
 
-*fips: A five-digit number (represented as a string) indicating the U.S. county
+* fips: A five-digit number (represented as a string) indicating the U.S. county
 
-*SCC: The name of the source as indicated by a digit string (see source code classification table)
+* SCC: The name of the source as indicated by a digit string (see source code classification table)
 
-*Pollutant: A string indicating the pollutant
+* Pollutant: A string indicating the pollutant
 
-*Emissions: Amount of PM2.5 emitted, in tons
+* Emissions: Amount of PM2.5 emitted, in tons
 
-*type: The type of source (point, non-point, on-road, or non-road)
+* type: The type of source (point, non-point, on-road, or non-road)
 
-*year: The year of emissions recorded
+* year: The year of emissions recorded
 
 Source Classification Code Table (Source_Classification_Code.rds): This table provides a mapping from the SCC digit strings in the Emissions table to the actual name of the PM2.5 source. The sources are categorized in a few different ways from more general to more specific and you may choose to explore whatever categories you think are most useful. For example, source “10100101” is known as “Ext Comb /Electric Gen /Anthracite Coal /Pulverized Coal”.
 
 You can read each of the two files using the readRDS() function in R. For example, reading in each file can be done with the following code:
 
-## This first line will likely take a few seconds. Be patient!
-NEI <- readRDS("summarySCC_PM25.rds")
-SCC <- readRDS("Source_Classification_Code.rds")
+#### This first line will likely take a few seconds. Be patient!
+	NEI <- readRDS("summarySCC_PM25.rds")
+	SCC <- readRDS("Source_Classification_Code.rds")
 as long as each of those files is in your current working directory (check by calling dir() and see if those files are in the listing).
 
 ##Assignment
